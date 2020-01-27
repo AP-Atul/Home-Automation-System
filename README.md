@@ -8,7 +8,7 @@ turn on lights and fan using Bluetooth.
 3. Material Desgins
 
 # Icons
-Icons are from https://wwww.flaticon.com
+Icons are from https://www.flaticon.com
 
 # Help
 If any issue occurs, feel free to raise an issue.
