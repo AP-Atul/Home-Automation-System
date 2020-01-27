@@ -1,7 +1,6 @@
 package com.iot.homeautomation;
 
 import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothHeadset;
 import android.bluetooth.BluetoothProfile;
 import android.content.Intent;
@@ -22,14 +21,13 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final int REQ_CODE_SPEECH_INPUT = 100;
     private ImageView fan;
     private ImageView fan_power;
     private ImageView bulb;
     private ImageView bulb_power;
-    private TextView status;
+    private TextView status, statusBulbText, statusFanText;
     private RelativeLayout connectBluetooth;
-
-    private static final int REQ_CODE_SPEECH_INPUT = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         bulb = findViewById(R.id.bulb);
         bulb_power = findViewById(R.id.bulb_power);
         status = findViewById(R.id.status);
+        statusBulbText = findViewById(R.id.statusBulbText);
+        statusFanText = findViewById(R.id.statusFanText);
+
         ImageView mic = findViewById(R.id.mic);
         connectBluetooth = findViewById(R.id.connectBluetooth);
         RelativeLayout fanRL = findViewById(R.id.fanLayout);
@@ -53,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 fan.setImageResource(R.drawable.fan_on);
                 fan_power.setImageResource(R.drawable.power_on);
+                statusFanText.setText("ON");
+                statusFanText.setTextColor(getResources().getColor(R.color.green));
             }
         });
 
@@ -61,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bulb.setImageResource(R.drawable.bulb_on);
                 bulb_power.setImageResource(R.drawable.power_on);
+                statusBulbText.setText("ON");
+                statusBulbText.setTextColor(getResources().getColor(R.color.green));
             }
         });
 
@@ -166,20 +171,28 @@ public class MainActivity extends AppCompatActivity {
     private void lightsOn() {
         bulb.setImageResource(R.drawable.bulb_on);
         bulb_power.setImageResource(R.drawable.power_on);
+        statusBulbText.setText("ON");
+        statusBulbText.setTextColor(getResources().getColor(R.color.green));
     }
 
     private void lightsOff() {
         bulb.setImageResource(R.drawable.bulb_off);
         bulb_power.setImageResource(R.drawable.power_off);
+        statusBulbText.setText("OFF");
+        statusBulbText.setTextColor(getResources().getColor(R.color.black));
     }
 
     private void fanOn() {
         fan.setImageResource(R.drawable.fan_on);
         fan_power.setImageResource(R.drawable.power_on);
+        statusBulbText.setText("ON");
+        statusBulbText.setTextColor(getResources().getColor(R.color.green));
     }
 
     private void fanOff() {
         fan.setImageResource(R.drawable.fan_off);
         fan_power.setImageResource(R.drawable.power_off);
+        statusBulbText.setText("OFF");
+        statusBulbText.setTextColor(getResources().getColor(R.color.black));
     }
 }

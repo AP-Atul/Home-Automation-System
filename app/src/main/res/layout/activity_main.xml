@@ -21,9 +21,9 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Disconnected"
+            android:textColor="#4C4C4F"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#4C4C4F"/>
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -31,58 +31,84 @@
         android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp"
         android:layout_below="@id/connectBluetooth"
-        android:baselineAligned="false">
+        android:layout_marginTop="25dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
 
         <RelativeLayout
             android:id="@+id/bulbLayout"
             android:layout_width="0dp"
             android:layout_height="150dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:padding="10dp"
+            android:layout_weight="1"
             android:background="@drawable/rounded_layout"
-            android:layout_weight="1">
-            
+            android:padding="10dp">
+
             <ImageView
                 android:id="@+id/bulb"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/bulb_off"/>
+                android:src="@drawable/bulb_off" />
 
             <ImageView
                 android:id="@+id/bulb_power"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/power_off"/>
-            
+                android:src="@drawable/power_off" />
+
+            <TextView
+                android:id="@+id/statusBulbText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/bulb_power"
+                android:layout_toLeftOf="@id/bulb_power"
+                android:text="off"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/fanLayout"
             android:layout_width="0dp"
             android:layout_height="150dp"
+            android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:padding="10dp"
+            android:layout_weight="1"
             android:background="@drawable/rounded_layout"
-            android:layout_weight="1">
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/fan"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/fan_off"/>
+                android:src="@drawable/fan_off" />
 
             <ImageView
                 android:id="@+id/fan_power"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/power_off"/>
+                android:src="@drawable/power_off" />
+
+            <TextView
+                android:id="@+id/statusFanText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/fan_power"
+                android:layout_toLeftOf="@id/fan_power"
+                android:text="off"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
         </RelativeLayout>
     </LinearLayout>
@@ -108,9 +134,9 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="All Commands ->"
+            android:textColor="#4C4C4F"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#4C4C4F"/>
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
