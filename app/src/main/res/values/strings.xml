@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">HomeAutomation</string>
+
+    <string-array name="commands">
+        <item>turn on lights</item>
+        <item>light</item>
+        <item>lights</item>
+        <item>lights on</item>
+        <item>turn off lights</item>
+        <item>lights off</item>
+        <item>turn on fan</item>
+        <item>fan on</item>
+        <item>fans</item>
+        <item>turn off fan</item>
+        <item>fan off</item>
+    </string-array>
+</resources>

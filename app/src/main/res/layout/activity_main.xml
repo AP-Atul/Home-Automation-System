@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#174CAF50"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/connectBluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_layout">
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Disconnected"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#4C4C4F"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/connectBluetooth"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:id="@+id/bulbLayout"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:background="@drawable/rounded_layout"
+            android:layout_weight="1">
+            
+            <ImageView
+                android:id="@+id/bulb"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bulb_off"/>
+
+            <ImageView
+                android:id="@+id/bulb_power"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/power_off"/>
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fanLayout"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:background="@drawable/rounded_layout"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/fan"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/fan_off"/>
+
+            <ImageView
+                android:id="@+id/fan_power"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/power_off"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/mic" />
+
+    <RelativeLayout
+        android:id="@+id/commands"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ll"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="All Commands ->"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#4C4C4F"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
