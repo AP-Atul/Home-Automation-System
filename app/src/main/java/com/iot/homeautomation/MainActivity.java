@@ -1,6 +1,7 @@
 package com.iot.homeautomation;
 
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothHeadset;
 import android.bluetooth.BluetoothProfile;
 import android.content.Intent;
@@ -67,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         mic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Listening", Toast.LENGTH_SHORT).show();
                 startVoiceInput();
             }
         });
@@ -95,12 +95,12 @@ public class MainActivity extends AppCompatActivity {
         checkBluetoothStatus();
     }
 
-    private void checkBluetoothStatus(){
-        if(getBluetoothStatus()){
+    private void checkBluetoothStatus() {
+        if (getBluetoothStatus()) {
             status.setTextColor(getResources().getColor(R.color.white));
             status.setText("Bluetooth Connected");
             connectBluetooth.setBackground(getResources().getDrawable(R.drawable.rounded_layout_color));
-        }else{
+        } else {
             status.setTextColor(getResources().getColor(R.color.black));
             status.setText("Bluetooth Disconnected");
             connectBluetooth.setBackground(getResources().getDrawable(R.drawable.rounded_layout));
@@ -137,44 +137,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void performTheCommand(String command) {
-        switch (command){
+        switch (command) {
             case "turn on lights":
             case "light":
             case "lights":
             case "lights on":
-                lightsOn(); break;
+                lightsOn();
+                break;
 
             case "turn off lights":
             case "lights off":
-                lightsOff(); break;
+                lightsOff();
+                break;
 
             case "turn on fan":
             case "fan on":
             case "fans":
-                fanOn(); break;
+                fanOn();
+                break;
 
             case "turn off fan":
             case "fan off":
-                fanOff(); break;
+                fanOff();
+                break;
         }
     }
 
-    private void lightsOn(){
+    private void lightsOn() {
         bulb.setImageResource(R.drawable.bulb_on);
         bulb_power.setImageResource(R.drawable.power_on);
     }
 
-    private void lightsOff(){
+    private void lightsOff() {
         bulb.setImageResource(R.drawable.bulb_off);
         bulb_power.setImageResource(R.drawable.power_off);
     }
 
-    private void fanOn(){
+    private void fanOn() {
         fan.setImageResource(R.drawable.fan_on);
         fan_power.setImageResource(R.drawable.power_on);
     }
 
-    private void fanOff(){
+    private void fanOff() {
         fan.setImageResource(R.drawable.fan_off);
         fan_power.setImageResource(R.drawable.power_off);
     }
