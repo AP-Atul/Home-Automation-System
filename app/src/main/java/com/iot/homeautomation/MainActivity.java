@@ -52,20 +52,14 @@ public class MainActivity extends AppCompatActivity {
         fanRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fan.setImageResource(R.drawable.fan_on);
-                fan_power.setImageResource(R.drawable.power_on);
-                statusFanText.setText("ON");
-                statusFanText.setTextColor(getResources().getColor(R.color.green));
+                performTheCommand("lights");
             }
         });
 
         bulbRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bulb.setImageResource(R.drawable.bulb_on);
-                bulb_power.setImageResource(R.drawable.power_on);
-                statusBulbText.setText("ON");
-                statusBulbText.setTextColor(getResources().getColor(R.color.green));
+                performTheCommand("fans");
             }
         });
 
@@ -185,14 +179,14 @@ public class MainActivity extends AppCompatActivity {
     private void fanOn() {
         fan.setImageResource(R.drawable.fan_on);
         fan_power.setImageResource(R.drawable.power_on);
-        statusBulbText.setText("ON");
-        statusBulbText.setTextColor(getResources().getColor(R.color.green));
+        statusFanText.setText("ON");
+        statusFanText.setTextColor(getResources().getColor(R.color.green));
     }
 
     private void fanOff() {
         fan.setImageResource(R.drawable.fan_off);
         fan_power.setImageResource(R.drawable.power_off);
-        statusBulbText.setText("OFF");
-        statusBulbText.setTextColor(getResources().getColor(R.color.black));
+        statusFanText.setText("OFF");
+        statusFanText.setTextColor(getResources().getColor(R.color.black));
     }
 }
