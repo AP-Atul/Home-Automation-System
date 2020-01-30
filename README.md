@@ -11,8 +11,8 @@ turn on lights and fan using Bluetooth.
 Icons are from https://www.flaticon.com
 
 # Screens
-![ui1](https://github.com/AP-Atul/Home-Automation-System/blob/master/screens/ui.png)
-![ui2](https://github.com/AP-Atul/Home-Automation-System/blob/master/screens/ui2.png)
+![ui1](https://github.com/AP-Atul/Home-Automation-System/blob/master/screens/ui.png "UI for power off appliances")
+![ui2](https://github.com/AP-Atul/Home-Automation-System/blob/master/screens/ui2.png "UI for power on appliances")
 
 # Help
 If any issue occurs, feel free to raise an issue.
