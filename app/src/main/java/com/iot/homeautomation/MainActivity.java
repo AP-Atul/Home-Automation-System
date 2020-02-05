@@ -52,14 +52,14 @@ public class MainActivity extends AppCompatActivity {
         fanRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                performTheCommand("lights");
+                performTheCommand("fans");
             }
         });
 
         bulbRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                performTheCommand("fans");
+                performTheCommand("lights");
             }
         });
 
